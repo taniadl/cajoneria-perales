@@ -1,0 +1,2 @@
+class Cajon < ApplicationRecord
+end

@@ -5,3 +5,32 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Cajon.destroy_all if Rails.env.development?
+
+
+huayco = Cajon.create( {
+  name: "huayco" ,
+   price: 12 }
+   )
+
+fresa = Cajon.create( {
+  name: "fresa" ,
+   price: 12 }
+   )
+
+huayco = Cajon.create( {
+  name: "cuadrada" ,
+   price: 12 }
+   )
+
+huayco = Cajon.create( {
+  name: "pepinera" ,
+   price: 12 }
+   )
+
+
+
+Prueba = [ 1, 2, 3, 4]
+
+puts 'four cajons created'

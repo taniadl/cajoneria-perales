@@ -8,12 +8,12 @@
    <li> <%= type.capitalize %></li>
   <% end %>
 </ol>
-<form action="/cajones" method="get">
-  <input type="text" name="nombre_cajon" placeholder="Que cajon?">
+<form action="/cajons" method="get">
+  <input type="text" name="name" placeholder="Que cajon?">
   <input type="submit">
 </form>
 
-<form action="/cajones" method="post">
+<form action="/cajons" method="post">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <input type="text" name="name" placeholder="Nombre">
   <input type="text" name="price" placeholder="Precio">
