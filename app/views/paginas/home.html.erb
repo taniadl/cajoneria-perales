@@ -2,15 +2,8 @@
 
 
 <h2>Seleccione cajon para ver informacion</h2>
-<%= form_tag cajons_path, method: :get do %>
+<%= form_tag views_cajon_path(@cajon), method: :get do %>
     <%= text_field_tag :query,
       params[:query], placeholder: "Elige tipo de cajon", class: "form-tag-index"%>
     <%= submit_tag "Search" , class: "btn btn-primary"%>
-
-<form action="/cajons" method="post">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <input type="text" name="name" placeholder="Nombre">
-  <input type="text" name="price" placeholder="Precio">
-  <input type="submit">
-
-</form>
+<% end  %>

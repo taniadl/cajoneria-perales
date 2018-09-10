@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   # post 'cajons', to: 'cajons#create'
   # get 'cajons/:id/edit', to: 'cajons#edit'
   # patch 'cajons/:id', to: 'cajons#update'
-  # get 'cajons/:id', to: 'cajons#show', as: :cajon
   # delete 'cajons/:id' to: 'cajons#destroy'
 
   resources :cajons
