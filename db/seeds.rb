@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Cajon.destroy_all if Rails.env.development?
-
+p "destroy outdated data"
 
 huayco = Cajon.create( {
   name: "huayco" ,

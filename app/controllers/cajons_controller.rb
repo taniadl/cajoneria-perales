@@ -17,7 +17,7 @@ class CajonsController < ApplicationController
 
 
  def show
-  @cajon = Cajon.find(params[:id].to_i)
+  @cajon = Cajon.find(params[:id])
  end
 
  def edit
@@ -32,7 +32,7 @@ class CajonsController < ApplicationController
  end
 
  def destroy
-  @cajons = Cajons.find(params[:id])
+  @cajons = Cajon.find(params[:id])
   @cajons.destroy
 
   redirect_to cajon_path

@@ -1,17 +1,11 @@
 <p>Now is <%= Time.now %></p>
 
-<% categories = ['cuadrada', 'papaya', 'piña', 'fresa', 'mango', 'pepinera', 'rocoto', 'platano', 'huayco' ] %>
 
-<h2> Elige el tipo de cajón para ver detalles </h2>
-<ol>
-  <% categories.each do |type| %>
-   <li> <%= type.capitalize %></li>
-  <% end %>
-</ol>
-<form action="/cajons" method="get">
-  <input type="text" name="name" placeholder="Que cajon?">
-  <input type="submit">
-</form>
+<h2>Seleccione cajon para ver informacion</h2>
+<%= form_tag cajons_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query], placeholder: "Elige tipo de cajon", class: "form-tag-index"%>
+    <%= submit_tag "Search" , class: "btn btn-primary"%>
 
 <form action="/cajons" method="post">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
