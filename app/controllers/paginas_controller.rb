@@ -7,4 +7,7 @@ class PaginasController < ApplicationController
 
   def home
   end
+
+  def update_price
+  end
 end

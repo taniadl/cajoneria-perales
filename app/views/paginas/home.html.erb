@@ -1,22 +1,3 @@
 <p>Now is <%= Time.now %></p>
 
-<% categories = ['cuadrada', 'papaya', 'piña', 'fresa', 'mango', 'pepinera', 'rocoto', 'platano', 'huayco' ] %>
 
-<h2> Elige el tipo de cajón para ver detalles </h2>
-<ol>
-  <% categories.each do |type| %>
-   <li> <%= type.capitalize %></li>
-  <% end %>
-</ol>
-<form action="/cajones" method="get">
-  <input type="text" name="nombre_cajon" placeholder="Que cajon?">
-  <input type="submit">
-</form>
-
-<form action="/cajones" method="post">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <input type="text" name="name" placeholder="Nombre">
-  <input type="text" name="price" placeholder="Precio">
-  <input type="submit">
-
-</form>

@@ -1,0 +1,11 @@
+<p>Seleccion tipo de cajón</p>
+ <% @cajons.each do |type|  %>
+    <h2><%= link_to type.name, cajon_path(type) %></h2>
+      <p><%= type.price %></p>
+
+  <% end %>
+
+<%= form_tag(cajons_path, method: :get) do %>
+  <%= text_field_tag :name, params[:terms] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
