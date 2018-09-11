@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Cajon.destroy_all if Rails.env.development?
+User.destroy_all if Rails.env.development?
+Client.destroy_all if Rails.env.development?
+
+
 p "destroy outdated data"
 
 huayco = Cajon.create( {
@@ -29,8 +33,32 @@ huayco = Cajon.create( {
    price: 12 }
    )
 
+Carola = User.create({
+  first_name: "Carola",
+  last_name: "Santos Pajuelo"
+})
+
+Silverio = User.create({
+  first_name: "Silverio",
+  last_name: "Perales Garay"
+})
+
+p "created 2 users"
+
+Client.create({
+  first_name: "Nick",
+  last_name: "Jonas",
+  user: Carola
+})
+
+Client.create({
+  first_name: "Kevin",
+  last_name: "Jonas",
+  user: Silverio
 
 
-Prueba = [ 1, 2, 3, 4]
+})
+ p "created 2 clients"
+
 
 puts 'four cajons created'
