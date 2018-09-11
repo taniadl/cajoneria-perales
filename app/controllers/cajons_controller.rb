@@ -1,7 +1,7 @@
 class CajonsController < ApplicationController
 
  def index
-  @cajons = Cajon.all
+  @cajons = Cajon.search(params[:name])
 
  end
 

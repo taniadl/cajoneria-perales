@@ -1,9 +1,3 @@
 <p>Now is <%= Time.now %></p>
 
 
-<h2>Seleccione cajon para ver informacion</h2>
-<%= form_tag views_cajon_path(@cajon), method: :get do %>
-    <%= text_field_tag :query,
-      params[:query], placeholder: "Elige tipo de cajon", class: "form-tag-index"%>
-    <%= submit_tag "Search" , class: "btn btn-primary"%>
-<% end  %>
