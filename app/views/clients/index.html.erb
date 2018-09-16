@@ -1,0 +1,12 @@
+<h2>Lista de Clientes </h2>
+<% @clients.each do |client| %>
+<h3><%= link_to "#{client.first_name} #{[client.last_name]}" , client_path(client)  %></h3>
+<p><% end %></p>
+
+
+<h2>Busca a un cliente en especifico</h2>
+
+<%= form_tag(clients_path, method: :get) do %>
+  <%= text_field_tag :first_name, params[:first_name] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>

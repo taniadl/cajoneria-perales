@@ -1,0 +1,14 @@
+<h2>Lista de usuarios</h2>
+<% @users.each do |user|  %>
+<%= user.first_name  %>
+<%= user.last_name %>
+<% end %>
+
+<h2> Encuentra a un usuario en especifico </h2>
+
+
+<%= form_tag(users_path, method: :get) do %>
+  <%= text_field_tag :first_name, params[:first_name] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
