@@ -35,12 +35,16 @@ huayco = Cajon.create( {
 
 Carola = User.create({
   first_name: "Carola",
-  last_name: "Santos Pajuelo"
+  last_name: "Santos Pajuelo",
+  email: "carola@gmail.com",
+  password: "123456"
 })
 
 Silverio = User.create({
   first_name: "Silverio",
-  last_name: "Perales Garay"
+  last_name: "Perales Garay",
+  email: "silverio@gmail.com",
+  password: "123456"
 })
 
 p "created 2 users"

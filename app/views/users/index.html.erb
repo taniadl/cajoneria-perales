@@ -1,7 +1,6 @@
 <h2>Lista de usuarios</h2>
 <% @users.each do |user|  %>
-<%= user.first_name  %>
-<%= user.last_name %>
+<h2> <%= link_to "#{user.first_name} #{user.last_name}" , user_path(user) %></h2>
 <% end %>
 
 <h2> Encuentra a un usuario en especifico </h2>

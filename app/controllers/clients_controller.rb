@@ -13,7 +13,7 @@ class ClientsController < ApplicationController
   @client = Client.new(params[:client])
   @client.save
 
-  redirect_to cajon_path(@cajon)
+  redirect_to cajon_path(@client)
  end
 
 

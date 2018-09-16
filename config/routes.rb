@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'contacto', to: 'paginas#contacto', as: :contacto
   get 'acerca', to: 'paginas#acerca', as: :acerca
   # get 'cajons', to: 'cajons#index', as: :cajons
