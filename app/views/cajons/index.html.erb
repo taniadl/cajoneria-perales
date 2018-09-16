@@ -6,6 +6,6 @@
   <% end %>
 
 <%= form_tag(cajons_path, method: :get) do %>
-  <%= text_field_tag :name, params[:terms] %>
+  <%= text_field_tag :name, params[:name] %>
   <%= submit_tag 'Search', name: nil %>
 <% end %>
