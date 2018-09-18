@@ -9,7 +9,7 @@ class UsersController < ApplicationController
  end
 
  def create
-  @user = User.new(params[:client])
+  @user = User.new(params[:user])
   @user.save
 
   redirect_to user_path(@user)
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
 
  def show
-  @client = Client.find(params[:id])
+  @user = User.find(params[:id])
  end
 
  def edit
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
  end
 
  def update
-  @user = Client.find(params[:id])
+  @user = User.find(params[:id])
   @user.update(params[:user])
 
   redirect_to user_path(@user)
@@ -41,6 +41,6 @@ class UsersController < ApplicationController
  private
 
  def user_params
-  params.require(:user).permit(:first_name, :last_name)
+  params.require(:user).permit(:first_name, :last_name, :email)
  end
 end
