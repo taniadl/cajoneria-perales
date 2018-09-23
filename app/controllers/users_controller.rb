@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
-
  def index
   @users = User.search(params[:first_name])
-
  end
 
  def new
@@ -34,7 +32,6 @@ class UsersController < ApplicationController
  def destroy
   @user = User.find(params[:id])
   @user.destroy
-
   redirect_to user_path
  end
 

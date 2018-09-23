@@ -3,8 +3,8 @@ class CreateCajons < ActiveRecord::Migration[5.2]
     create_table :cajons do |t|
       t.string :name
       t.integer :price
+      t.references :calcu, foreign_key: true
 
-      t.timestamps
     end
   end
 end

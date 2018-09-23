@@ -1,4 +1,5 @@
 class Client < ActiveRecord::Base
+  has_one :shoppingcarts
   belongs_to :user
 
   def self.search(name)

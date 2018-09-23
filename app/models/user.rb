@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :clients
+  has_many :owned_cajons
+  has_one :calcu
   def self.search(first_name)
     if first_name
      where('first_name LIKE ?', "%#{first_name}%")

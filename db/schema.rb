@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_16_070620) do
+ActiveRecord::Schema.define(version: 2018_09_19_043755) do
 
   create_table "cajons", force: :cascade do |t|
     t.string "name"
     t.integer "price"
+    t.integer "calcu_id"
+    t.index ["calcu_id"], name: "index_cajons_on_calcu_id"
+  end
+
+  create_table "calcus", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_calcus_on_user_id"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -24,6 +32,22 @@ ActiveRecord::Schema.define(version: 2018_09_16_070620) do
     t.string "last_name"
     t.integer "user_id"
     t.index ["user_id"], name: "index_clients_on_user_id"
+  end
+
+  create_table "owned_cajons", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_owned_cajons_on_user_id"
+  end
+
+  create_table "shoppingcarts", force: :cascade do |t|
+    t.integer "client_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_shoppingcarts_on_client_id"
   end
 
   create_table "users", force: :cascade do |t|

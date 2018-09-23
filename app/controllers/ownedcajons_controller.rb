@@ -1,0 +1,2 @@
+class OwnedcajonsController < ApplicationController
+end

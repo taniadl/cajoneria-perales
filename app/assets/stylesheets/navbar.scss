@@ -1,5 +1,9 @@
 .navbar-backgroundcolor{
   background-color: burlywood;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.navbar-wagon-item:hover {
+  cursor: pointer;
 }
